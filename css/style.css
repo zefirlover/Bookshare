@@ -215,7 +215,6 @@ main {
     display: flex;
 }
 
-
 /*pseudogrid*/
 .productContainer {
     margin: 4px;
@@ -306,4 +305,35 @@ main {
 }
 .button:active {
     opacity: 20%;
+}
+
+footer {
+    min-height: 100px;
+    background-color: var(--background-color);
+
+    -webkit-box-shadow: var(--footer-shadow);
+    -moz-box-shadow: var(--footer-shadow);
+    box-shadow: var(--footer-shadow);
+
+    padding: 50px 15vw;
+}
+
+.inlineList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (max-width: 768px){
+    .inlineList { flex-direction: column; }
+}
+
+.inlineList__element {
+    display: flex;
+    align-items: center;
 }
