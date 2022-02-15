@@ -13,3 +13,13 @@ themeSwitch.addEventListener('change', () => {
     document.getElementById("filterIcon").src = "img/filterIconDT.svg";
   }
 });
+
+function openFilterForm() {
+  isDisplayBlock = document.getElementById("filterForm").style.display;
+
+  if(isDisplayBlock=="block"){
+    document.getElementById("filterForm").style.display = "none";
+  } else {
+    document.getElementById("filterForm").style.display = "block";
+  }
+}

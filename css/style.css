@@ -190,3 +190,27 @@ main {
 .searchBlock__button:active {
     opacity: 20%;
 }
+
+.filterForm {
+    display: none;
+
+    min-height: 20px;
+
+    margin: 20px 0;
+    padding: 5px 15px;
+
+    background-color: var(--background-color);
+    border-radius: 20px;
+
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+.filterForm__header {
+    display: block;
+}
+
+.filterForm__container {
+    display: flex;
+}
