@@ -7,14 +7,17 @@ themeSwitch.addEventListener('change', () => {
     document.getElementById("searchIcon").src = "img/searchIconLT.svg";
     document.getElementById("filterIcon").src = "img/filterIconLT.svg";
     document.getElementById("githubIcon").src = "img/githubIconLT.svg";
-    document.getElementById("linkedinIcon").src = "img/linkedinIconLT.svg";
+    // linkedinIcon1 == linkedinIcon2
+    document.getElementById("linkedinIcon1").src = "img/linkedinIconLT.svg";
+    document.getElementById("linkedinIcon2").src = "img/linkedinIconLT.svg";
   } else {
     document.body.classList.replace('lightTheme', 'darkTheme');
     document.getElementById("userLogo").src = "img/userIconDT.svg";
     document.getElementById("searchIcon").src = "img/searchIconDT.svg";
     document.getElementById("filterIcon").src = "img/filterIconDT.svg";
     document.getElementById("githubIcon").src = "img/githubIconDT.svg";
-    document.getElementById("linkedinIcon").src = "img/linkedinIconDT.svg";
+    document.getElementById("linkedinIcon1").src = "img/linkedinIconDT.svg";
+    document.getElementById("linkedinIcon2").src = "img/linkedinIconDT.svg";
   }
 });
 
