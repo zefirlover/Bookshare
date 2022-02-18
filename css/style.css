@@ -24,6 +24,10 @@
     --text-color: #131313;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 .themeBody {
     background: var(--background-color);
     background: var(--background);
@@ -34,6 +38,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500; /*medium*/
     color: var(--text-color);
+    min-height: 100vh;
 }
 
 h1 {
@@ -144,11 +149,33 @@ header {
     opacity: 20%;
 }
 
-main {
-    padding: 30px 15vw;
+.button {
+    height: 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 10px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    opacity: 80%;
+}
+.button:active {
+    opacity: 20%;
 }
 
+main {
+    padding: 30px 15vw;
+    min-height: 100%;
+}
 
+/*index.html*/
 .searchBlock {
     min-height: 20px;
 
@@ -286,27 +313,118 @@ main {
     font-size: 13px;
 }
 
-.button {
-    height: 20px;
-    border: 2px solid var(--text-color);
-    border-radius: 20px;
-    padding: 10px;
+/*loginPage.html*/
+.loginBlock {
+    margin: 0 20vw;
+}
+@media (max-width: 768px){
+    .loginBlock { margin: 0; }
+}
 
-    text-transform: uppercase;
-    text-decoration: none;
+.loginBlock__input {
+    width: calc(100% - 30px);
+    height: 35px;
+
+    margin: 10px 0;
+    padding: 0 15px;
+
+    border-radius: 45px;
+    border: transparent;
+    background-color: var(--background-color);
+
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+.loginBlock__button {
+    width: 100%;
+    height: 35px;
+
+    margin: 10px 0;
+
+    border-radius: 45px;
+    border: transparent;
+    background-color: var(--background-color);
     color: var(--text-color);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
 }
-.button:hover {
+.loginBlock__button:hover {
     opacity: 80%;
 }
-.button:active {
+.loginBlock__button:active {
     opacity: 20%;
 }
 
+/*checkbox "remember me"*/
+.checkbox__container {
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox__input + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.checkbox__input + label::before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: var(--background-color);
+    border: 2px solid var(--text-color);
+    border-radius: 35%;
+}
+.checkbox__input:hover + label::before {
+    opacity: 80%;
+}
+.checkbox__input:focus + label::before {
+    opacity: 80%;
+}
+.checkbox__input:checked + label::before {
+    background: var(--text-color);
+}
+.checkbox__input:disabled + label {
+    opacity: 50%;
+    cursor: auto;
+}
+.checkbox__input:disabled + label::before {
+    box-shadow: none;
+    opacity: 50%;
+}
+.checkbox__input:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 11px;
+    background: var(--background-color);
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 var(--background-color),
+      4px 0 0 var(--background-color),
+      4px -2px 0 var(--background-color),
+      4px -4px 0 var(--background-color),
+      4px -6px 0 var(--background-color),
+      4px -8px 0 var(--background-color);
+    transform: rotate(45deg);
+}
+
+/*footer block*/
 footer {
     min-height: 100px;
     background-color: var(--background-color);

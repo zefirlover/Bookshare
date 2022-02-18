@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html - lang="ua">
+    <head>
+        <title>Bookshare</title>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect"href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="themeBody darkTheme" id="themeBody">
+            <header>
+                <a class="user" href="loginPage.html">
+                    <img class="user__logo" id="shoppingIcon" src="img/icon/shoppingIconDT.svg" alt="">
+                </a>
+                <a class="reference" href="index.html">
+                    <h1 class="header__logo">BookShare</h1>
+                </a>
+                <label class="switch">
+                    <input id="theme-switcher" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </header>
+            <main>
+                  <section class="loginBlock">
+                        <h2>Вхід</h2>
+                        <input class="loginBlock__input" type="text" placeholder="Логін" name="login">
+                        <input class="loginBlock__input" type="password" placeholder="Пароль" name="password">
+                        <section class="checkbox__container">
+                              <input type="checkbox" class="checkbox__input" id="checkbox__input">
+                              <label for="checkbox__input">Запам'ятайте мене</label>
+                        </section>
+                        <button class="loginBlock__button">Увійти</button>
+                  </section>
+            </main>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/script.js"></script>
+</html>
