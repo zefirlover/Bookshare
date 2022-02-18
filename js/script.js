@@ -1,23 +1,23 @@
 const themeSwitch = document.getElementById('theme-switcher');
 
 themeSwitch.addEventListener('change', () => {
-  if (document.body.classList.contains('darkTheme')) {
-    document.body.classList.replace('darkTheme', 'lightTheme');
-    document.getElementById("userLogo").src = "img/userIconLT.svg";
-    document.getElementById("searchIcon").src = "img/searchIconLT.svg";
-    document.getElementById("filterIcon").src = "img/filterIconLT.svg";
-    document.getElementById("githubIcon").src = "img/githubIconLT.svg";
+  if (document.getElementById('themeBody').classList.contains('darkTheme')) {
+    document.getElementById('themeBody').classList.replace('darkTheme', 'lightTheme');
+    document.getElementById("shoppingIcon").src = "img/icon/shoppingIconLT.svg";
+    document.getElementById("searchIcon").src = "img/icon/searchIconLT.svg";
+    document.getElementById("filterIcon").src = "img/icon/filterIconLT.svg";
+    document.getElementById("githubIcon").src = "img/icon/githubIconLT.svg";
     // linkedinIcon1 == linkedinIcon2
-    document.getElementById("linkedinIcon1").src = "img/linkedinIconLT.svg";
-    document.getElementById("linkedinIcon2").src = "img/linkedinIconLT.svg";
+    document.getElementById("linkedinIcon1").src = "img/icon/linkedinIconLT.svg";
+    document.getElementById("linkedinIcon2").src = "img/icon/linkedinIconLT.svg";
   } else {
-    document.body.classList.replace('lightTheme', 'darkTheme');
-    document.getElementById("userLogo").src = "img/userIconDT.svg";
-    document.getElementById("searchIcon").src = "img/searchIconDT.svg";
-    document.getElementById("filterIcon").src = "img/filterIconDT.svg";
-    document.getElementById("githubIcon").src = "img/githubIconDT.svg";
-    document.getElementById("linkedinIcon1").src = "img/linkedinIconDT.svg";
-    document.getElementById("linkedinIcon2").src = "img/linkedinIconDT.svg";
+    document.getElementById('themeBody').classList.replace('lightTheme', 'darkTheme');
+    document.getElementById("shoppingIcon").src = "img/icon/shoppingIconDT.svg";
+    document.getElementById("searchIcon").src = "img/icon/searchIconDT.svg";
+    document.getElementById("filterIcon").src = "img/icon/filterIconDT.svg";
+    document.getElementById("githubIcon").src = "img/icon/githubIconDT.svg";
+    document.getElementById("linkedinIcon1").src = "img/icon/linkedinIconDT.svg";
+    document.getElementById("linkedinIcon2").src = "img/icon/linkedinIconDT.svg";
   }
 });
 

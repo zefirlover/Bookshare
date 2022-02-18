@@ -24,7 +24,7 @@
     --text-color: #131313;
 }
 
-body {
+.themeBody {
     background: var(--background-color);
     background: var(--background);
     filter: var(--background-filter);
