@@ -15,6 +15,7 @@ themeSwitch.addEventListener('change', () => {
     if (document.getElementById("userIcon")) {
       document.getElementById("userIcon").src = "img/icon/userIconLT.svg";
       document.getElementById("shoppingIcon1").src = "img/icon/shoppingIconLT.svg";
+      document.getElementById("redactIcon").src = "img/icon/pencilIconLT.svg";
     }
   } else {
     document.getElementById('themeBody').classList.replace('lightTheme', 'darkTheme');
@@ -29,6 +30,7 @@ themeSwitch.addEventListener('change', () => {
     if (document.getElementById("userIcon")) {
       document.getElementById("userIcon").src = "img/icon/userIconDT.svg";
       document.getElementById("shoppingIcon1").src = "img/icon/shoppingIconDT.svg";
+      document.getElementById("redactIcon").src = "img/icon/pencilIconDT.svg";
     }
   }
 });

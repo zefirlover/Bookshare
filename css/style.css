@@ -482,8 +482,13 @@ main {
 /*userPage.html*/
 .navbar {
     min-width: 100%;
+    margin: 0;
     padding: 10px 0;
 
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
 
     border-radius: 45px;
@@ -506,11 +511,20 @@ main {
 }
 
 .redact {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 34px;
     width: 34px;
     border: 2px solid var(--text-color);
     border-radius: 45%;
+
+    background-color: var(--background-color);
+}
+
+.redact__logo{
+    width: 20px;
 }
 
 .userInfo__block {
@@ -525,13 +539,30 @@ main {
     box-shadow: var(--shadow);
 }
 
+.userInfo__block-big {
+    min-height: 120px;
+    width: calc(100% - 30px);
+    padding: 15px;
+    border-radius: 35px;
+}
+
 .userInfo__text {
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 0 10px;
 }
 
 .rowBlock {
     display: flex;
+}
+
+.rowBlock__section {
+    flex-grow: 1;
+}
+.rowBlock__section-left {
+    margin-right: 5px;
+}
+.rowBlock__section-right {
+    margin-left: 5px;
 }
 
 /*footer block*/
