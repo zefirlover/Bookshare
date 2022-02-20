@@ -163,7 +163,7 @@ header {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .user {
+    .roundle {
         grid-column: 1;
         grid-row: 2;
         justify-self: center;
@@ -521,6 +521,8 @@ main {
     border-radius: 45%;
 
     background-color: var(--background-color);
+
+    cursor: pointer;
 }
 
 .redact__logo{
@@ -563,6 +565,33 @@ main {
 }
 .rowBlock__section-right {
     margin-left: 5px;
+}
+@media (max-width: 768px){
+    .rowBlock { display: block; }
+    .rowBlock__section-left { margin-right: 0; }
+    .rowBlock__section-right { margin-left: 0; }
+}
+
+.staticInput {
+    display: block;
+}
+
+.redactInput {
+    display: none;
+
+    width: calc(100% - 25px);
+    padding: 5px 10px;
+
+    background: none;
+    color: var(--text-color);
+
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+}
+
+.userInfo__button {
+    display: none;
+    margin-top: 20px;
 }
 
 /*footer block*/

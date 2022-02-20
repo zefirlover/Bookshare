@@ -42,40 +42,42 @@
                   <section class="userInfo">
                         <section class="userInfo__header">
                               <h2>Особиста сторінка</h2>
-                              <a class="redact" href="">
+                              <button class="redact" onclick="redactShow()">
                                     <img class="redact__logo" id="redactIcon" src="img/icon/pencilIconDT.svg" alt="">
-                              </a>
+                              </button>
                         </section>
                         <h3 class="userInfo__text">Логін</h3>
                         <div class="userInfo__block">
-                              <strong>placeholder-login</strong>
+                              <strong class="staticInput" id="staticLogin">placeholder-login</strong>
+                              <input class="redactInput" id="redactLogin" type="text" placeholder="placeholder-login" name="login">
                         </div>
                         <div class="rowBlock">
                               <section class="rowBlock__section rowBlock__section-left">
                                     <h3 class="userInfo__text">Ім'я</h3>
                                     <div class="userInfo__block">
-                                          <strong>placeholder-name</strong>
+                                          <strong class="staticInput" id="staticName">placeholder-name</strong>
+                                          <input class="redactInput" id="redactName" type="text" placeholder="placeholder-name" name="login">
                                     </div>
                               </section>
                               <section class="rowBlock__section rowBlock__section-right">
                                     <h3 class="userInfo__text">Прізвище</h3>
                                     <div class="userInfo__block">
-                                          <strong>placeholder-surname</strong>
+                                          <strong class="staticInput" id="staticSurname">placeholder-surname</strong>
+                                          <input class="redactInput" id="redactSurname" type="text" placeholder="placeholder-surname" name="login">
                                     </div>
                               </section>
                         </div>
                         <h3 class="userInfo__text">Електронна пошта</h3>
                         <div class="userInfo__block">
-                              <strong>placeholder-email@gmail.com</strong>
+                              <strong class="staticInput" id="staticEmail">placeholder-email@gmail.com</strong>
+                              <input class="redactInput" id="redactEmail" type="email" placeholder="placeholder-email@gmail.com" name="login">
                         </div>
                         <h3 class="userInfo__text">Номер телефону</h3>
                         <div class="userInfo__block">
-                              <strong>+38(800)555-35-35</strong>
+                              <strong class="staticInput" id="staticPhone">+38(800)555-35-35</strong>
+                              <input class="redactInput" id="redactPhone" type="tel" placeholder="+38(800)555-35-35" name="login">
                         </div>
-                        <h3 class="userInfo__text">Додаткові дані</h3>
-                        <div class="userInfo__block userInfo__block-big">
-                              <strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ex laboriosam quibusdam assumenda enim deleniti placeat debitis aspernatur sequi. Sint quidem, quas adipisci ratione autem dolore non tenetur sapiente quasi!</strong>
-                        </div>
+                        <button class="loginBlock__button userInfo__button" id="redactSave" onclick="redactShow()">Зберегти</button>
                   </section>
             </main>
             <footer>
