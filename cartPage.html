@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html - lang="ua">
-    <head>
-        <title>Bookshare</title>
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect"href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="themeBody darkTheme" id="themeBody">
-            <header>
-                <a class="roundle" href="loginPage.html">
-                    <img class="roundle__logo" id="shoppingIcon" src="img/icon/shoppingIconDT.svg" alt="">
-                </a>
-                <a class="logo reference" href="index.html">
-                    <h1 class="header__logo">BookShare</h1>
-                </a>
-                <label class="switch">
-                    <input id="theme-switcher" type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </header>
-            <main>
-                  <nav>
-                        <ul class="navbar">
-                              <li>
-                                    <a class="roundle" href="userPage.html">
-                                          <img class="roundle__logo" id="userIcon" src="img/icon/userIconDT.svg" alt="">
-                                    </a>
-                              </li>
-                              <li>
-                                    <a class="roundle" href="cartPage.html">
-                                          <img class="roundle__logo" id="shoppingIcon1" src="img/icon/shoppingIconDT.svg" alt="">
-                                    </a>
-                              </li>
-                        </ul>
-                  </nav>
-                  <section class="cartPage__header">
-                        <h2>Ваше замовлення</h2>
-                        <button class="loginBlock__button cartPage__button" id="cartPage__button" onclick="openFilterForm()">Забронювати</button>
-                  </section>
-                  <form class="filterForm" id="filterForm">
-                        <section class="bookForm__container">
-                              <h2 class="filterForm__header">Виберіть дату</h2>
-                              <input class="bookForm__dateInput dateInputDT" id="dateInput" type="date">
-                        </section>
-                        <button class="bookForm__button">забронювати</button>
-                  </form>
-                  <section class="productContainer">
-                        <section class="productContainer_row">
-                              <div class="product">
-                                    <img class="product__image" src="img/productImagePlaceholder.jpg" alt="">
-                                    <a href="" class="reference">
-                                          <h2 class="product__header">Герой Нашого Часу</h2>
-                                    </a>
-                                    <p class="product__author">Лесь Подерв'янський</p>
-                                    <a href="" class="product__library reference">Публічна бібліотека ім. Лесі Українки</a>
-                                    <a href="" class="button">забронювати</a>
-                              </div>
-                              <p class="emptyCart" id="emptyCart">Корзина порожня</p>
-                        </section>
-                  </section>
-            </main>
-            <footer>
-                  <a class="reference" href="index.html">
-                        <h1 class="header__logo">BookShare</h1>
-                  </a>
-                  <p>Наші соцмережі</p>
-                  <ul class="inlineList">
-                        <li>
-                              <a class="inlineList__element reference" href="https://github.com/zefirlover/Bookshare">
-                                    <img src="img/icon/githubIconDT.svg" id="githubIcon" alt="">
-                                    <p>GitHub</p>
-                              </a>
-                        </li>
-                        <li>
-                              <a class="inlineList__element reference" href="https://www.linkedin.com/in/bohdan-mushta-aa7323229/">
-                                    <img src="img/icon/linkedinIconDT.svg" id="linkedinIcon1" alt="">
-                                    <p>zefirlover</p>
-                              </a>
-                        </li>
-                        <li>
-                              <a class="inlineList__element reference" href="https://www.linkedin.com/in/nikolai-arkharov-57493b204/">
-                                    <img src="img/icon/linkedinIconDT.svg" id="linkedinIcon2" alt="">
-                                    <p>KolaCation</p>
-                              </a>
-                        </li>
-                  </ul>
-                  <p>Всі права захищено &copy; <br> zefirlover, KolaCation 2022</p>
-            </footer>
-        </div>
-    </body>
-    <script type="text/javascript" src="js/script.js"></script>
+
+<head>
+    <title>Bookshare</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="themeBody darkTheme" id="themeBody">
+        <header>
+            <a class="roundle" href="loginPage.html">
+                <img class="roundle__logo" id="shoppingIcon" src="img/icon/shoppingIconDT.svg" alt="">
+            </a>
+            <a class="logo reference" href="index.html">
+                <h1 class="header__logo">BookShare</h1>
+            </a>
+            <label class="switch">
+                <input id="theme-switcher" type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </header>
+        <main>
+            <nav>
+                <ul class="navbar">
+                    <li>
+                        <a class="roundle" href="userPage.html">
+                            <img class="roundle__logo" id="userIcon" src="img/icon/userIconDT.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="roundle" href="cartPage.html">
+                            <img class="roundle__logo" id="shoppingIcon1" src="img/icon/shoppingIconDT.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="cartPage__header">
+                <h2>Ваше замовлення</h2>
+                <button class="loginBlock__button cartPage__button" id="cartPage__button"
+                    onclick="openFilterForm()">Забронювати</button>
+            </section>
+            <form class="filterForm" id="filterForm">
+                <section class="bookForm__container">
+                    <h2 class="filterForm__header">Виберіть дату</h2>
+                    <input class="bookForm__dateInput dateInputDT" id="dateInput" type="date">
+                </section>
+                <button class="bookForm__button" onclick="bookActive(event)">забронювати</button>
+            </form>
+            <section class="productContainer">
+                <section class="productContainer_row">
+                    <div class="product" id="product">
+                        <img class="product__image" src="img/productImagePlaceholder.jpg" alt="">
+                        <a href="" class="reference">
+                            <h2 class="product__header">Герой Нашого Часу</h2>
+                        </a>
+                        <p class="product__author">Лесь Подерв'янський</p>
+                        <a href="" class="product__library reference">Публічна бібліотека ім. Лесі Українки</a>
+                    </div>
+                    <p class="emptyCart" id="emptyCart">Корзина порожня</p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <a class="reference" href="index.html">
+                <h1 class="header__logo">BookShare</h1>
+            </a>
+            <p>Наші соцмережі</p>
+            <ul class="inlineList">
+                <li>
+                    <a class="inlineList__element reference" href="https://github.com/zefirlover/Bookshare">
+                        <img src="img/icon/githubIconDT.svg" id="githubIcon" alt="">
+                        <p>GitHub</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="inlineList__element reference"
+                        href="https://www.linkedin.com/in/bohdan-mushta-aa7323229/">
+                        <img src="img/icon/linkedinIconDT.svg" id="linkedinIcon1" alt="">
+                        <p>zefirlover</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="inlineList__element reference"
+                        href="https://www.linkedin.com/in/nikolai-arkharov-57493b204/">
+                        <img src="img/icon/linkedinIconDT.svg" id="linkedinIcon2" alt="">
+                        <p>KolaCation</p>
+                    </a>
+                </li>
+            </ul>
+            <p>Всі права захищено &copy; <br> zefirlover, KolaCation 2022</p>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+
 </html>

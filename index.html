@@ -37,7 +37,46 @@
                   <form class="filterForm" id="filterForm">
                         <h2 class="filterForm__header">Фільтри</h2>
                         <div class="filterForm__container">
-                              <p>todo додати фільтри</p>
+                              <label class="radio__container" for="radioInput1">
+                                    <input type="radio" class="radio__input" id="radioInput1" name="literatureChoise" value="fictionalLiterature">
+                                    <span class="radio__checkmark">Художня література</span>
+                              </label>
+                              <select class="filterForm__select" id="fictionalLiteratureSelect">
+                                    <option value="detective">Детективи</option>
+                                    <option value="adventures">Пригоди</option>
+                                    <option value="horrors">Жахи, трилери</option>
+                                    <option value="drama">Драма</option>
+                                    <option value="clasicalProse">Класична проза</option>
+                                    <option value="modernProse">Сучасна проза</option>
+                                    <option value="historicalNovels">Історичні романи</option>
+                                    <option value="scienceFiction">Фантастика</option>
+                                    <option value="fantasy">Фентезі</option>
+                                    <option value="poetry">Поезія</option>
+                                    <option value="comics">Комікси</option>
+                              </select>
+                        </div>
+                        <div class="filterForm__container">
+                              <label class="radio__container" for="radioInput2">
+                                    <input type="radio" class="radio__input" id="radioInput2" name="literatureChoise" value="non-fictionalLiterature">
+                                    <span class="radio__checkmark">Наукова література</span>
+                              </label>
+                              <select class="filterForm__select" id="non-fictionalLiteratureSelect">
+                                    <option value="socialScience">Суспільні науки</option>
+                                    <option value="computerScience">Комп'ютерна література</option>
+                                    <option value="naturalScience">Природничі науки</option>
+                                    <option value="humanities">Гуанітарні науки</option>
+                                    <option value="philosophy">Філософія</option>
+                                    <option value="businessLiterature">Бізнес-література</option>
+                                    <option value="lawLiterature">Юридична література</option>
+                                    <option value="artLiterature">Мистецтвознавство</option>
+                                    <option value="medicalLiterature">Медична література</option>
+                                    <option value="historicalLiterature">Історична література</option>
+                                    <option value="historicalMaterials">Історичні матеріали</option>
+                                    <option value="economicLiterature">Економічна література</option>
+                                    <option value="technicalLiterature">Технічна література</option>
+                                    <option value="religiousLiterature">Релігійна література</option>
+                                    <option value="popularScience">Науково-популярна література</option>
+                              </select>
                         </div>
                   </form>
                   <section class="productContainer">

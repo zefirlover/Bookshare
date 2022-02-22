@@ -136,10 +136,28 @@ function redactShow() {
 
 var isCartEmpty = document.querySelectorAll(".product");
 
-if (isCartEmpty.length == 0) {
-  document.getElementById("emptyCart").style.display = "block";
-  document.getElementById("cartPage__button").disabled = true;
-} else {
+if (document.getElementById("cartPage__button")) {
+  if (isCartEmpty.length == 0) {
+    document.getElementById("emptyCart").style.display = "block";
+    document.getElementById("cartPage__button").disabled = true;
+  } else {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartPage__button").disabled = false;
+  }
+}
+/*does not work*/
+/*
+function bookActive(event) {
+  document.getElementById("product").style.display = "none";
+  document.getElementById("filterForm").style.display = "none";
   document.getElementById("emptyCart").style.display = "none";
-  document.getElementById("cartPage__button").disabled = false;
+  event.stopPropagation();
+}
+*/
+if (document.getElementById("radioInput1")) {
+  if (document.getElementById("radioInput1").checked = true) {
+    document.getElementById("fictionalLiteratureSelect").disabled = false;
+  } else {
+    document.getElementById("fictionalLiteratureSelect").disabled = true;
+  }
 }
