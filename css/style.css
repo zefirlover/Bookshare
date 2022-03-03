@@ -32,12 +32,13 @@ html, body {
 
 /*Fix the white background bottom thing attempt 1 - !important*/
 /*Fix the white background bottom thing attempt 2 - !important on body*/
+/*Fix the white background bottom thing attempt 3 - min-height 100% on body*/
 .themeBody {
-    background: var(--background-color) !important;
-    background: var(--background) !important;
-    filter: var(--background-filter) !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
+    background: var(--background-color);
+    background: var(--background);
+    filter: var(--background-filter);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500; /*medium*/
@@ -45,7 +46,7 @@ html, body {
 }
 
 .loginPage__themeBody {
-    min-height: 100vh !important;
+    min-height: 100vh;
 }
 
 h1 {
