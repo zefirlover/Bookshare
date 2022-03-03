@@ -40,7 +40,7 @@ html, body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500; /*medium*/
     color: var(--text-color);
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 h1 {
@@ -297,7 +297,7 @@ main {
 
     margin: 10px 0;
 }
-@media (max-width: 280px) {
+@media (max-width: 600px) {
     .filterForm__container {
         flex-direction: column;
     }
@@ -413,8 +413,12 @@ main {
     padding: 0 8px;
 }
 
-@media (max-width: 280px) {
-    /**/
+@media (max-width: 320px) {
+    .radio__checkmark {
+        padding: 0;
+        padding-left: 5px;
+        font-size: 14px;
+    }
 }
 
 .filterForm__select {
@@ -433,6 +437,12 @@ main {
 }
 .filterForm__select:active {
     opacity: 20%;
+}
+
+@media (max-width: 600px) {
+    .filterForm__select {
+        width: 100%;
+    }
 }
 
 /*loginPage.html*/
