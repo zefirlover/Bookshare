@@ -27,10 +27,11 @@
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 /*Fix the white background bottom thing attempt 1 - !important*/
+/*Fix the white background bottom thing attempt 2 - !important on body*/
 .themeBody {
     background: var(--background-color) !important;
     background: var(--background) !important;
