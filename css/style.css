@@ -1,10 +1,8 @@
 .darkTheme
 {
     --background-color: #121212;
-    --background: linear-gradient(195deg, rgba(18,7,31,1) 0%, rgba(23,7,3,1));
-    --background: -moz-linear-gradient(195deg, rgba(18,7,31,1) 0%, rgba(23,7,3,1));
-    --background: -webkit-linear-gradient(top right, rgba(18,7,31,1) 0%, rgba(23,7,3,1));
-    --background-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12071f",endColorstr="#241b09",GradientType=1);
+    --dark-background-color: #0e0d0d;
+    --background: url(../img/gradient-image-DT.png);
     --header-shadow: 0px 12px 16px -16px rgba(237, 245, 251, 0.6);
     --footer-shadow: 0px -12px 16px -16px rgba(237, 245, 251, 0.6);
     --shadow: 0px 0px 10px 0px rgba(237, 245, 251, 0.6);
@@ -15,10 +13,8 @@
 .lightTheme
 {
     --background-color: #fefbf2;
-    --background: linear-gradient(195deg, rgba(227,209,251,1) 0%, rgba(255,243,218,1));
-    --background: -moz-linear-gradient(195deg, rgba(227,209,251,1) 0%, rgba(255,243,218,1));
-    --background: -webkit-linear-gradient(195deg, rgba(227,209,251,1) 0%, rgba(255,243,218,1));
-    --background-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3d1fb",endColorstr="#fff3da",GradientType=1);
+    --dark-background-color: rgba(255,243,218,1);
+    --background: url(../img/gradient-image-LT.png);
     --header-shadow: 0px 2px 16px -5px rgba(34, 60, 80, 0.6);
     --footer-shadow: 0px -2px 16px -5px rgba(34, 60, 80, 0.6);
     --shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.6);
@@ -30,18 +26,12 @@ html, body {
     min-height: 100vh;
 }
 
-/*Fix the white background bottom thing attempt 1 - !important*/
-/*Fix the white background bottom thing attempt 2 - !important on body*/
-/*Fix the white background bottom thing attempt 3 - min-height 100% on body*/
-/*Fix the white background bottom thing attempt 4 - no min-height on body*/
-/*Fix the white background bottom thing attempt 5 - delete the opasity property for the gradient*/
-/*Fix the white background bottom thing attempt 6 - change "195deg" to "top right"*/
 .themeBody {
-    background: var(--background-color);
+    background: var(--dark-background-color);
     background: var(--background);
-    filter: var(--background-filter);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
 
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500; /*medium*/
