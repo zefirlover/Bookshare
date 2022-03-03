@@ -40,7 +40,10 @@ html, body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500; /*medium*/
     color: var(--text-color);
-    min-height: 100%;
+}
+
+.loginPage__themeBody {
+    min-height: 100vh;
 }
 
 h1 {
