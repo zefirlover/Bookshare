@@ -26,13 +26,14 @@
     --background-image: url(../img/icon/moonIcon.svg);
 }
 
-html, body {
-    min-height: 100%;
+html, body {/*
+    min-height: 100%;*/
 }
 
 /*Fix the white background bottom thing attempt 1 - !important*/
 /*Fix the white background bottom thing attempt 2 - !important on body*/
 /*Fix the white background bottom thing attempt 3 - min-height 100% on body*/
+/*Fix the white background bottom thing attempt 4 - no min-height on body*/
 .themeBody {
     background: var(--background-color);
     background: var(--background);
