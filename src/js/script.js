@@ -3,46 +3,46 @@ const themeSwitch = document.getElementById('theme-switcher');
 themeSwitch.addEventListener('change', () => {
   if (document.getElementById('themeBody').classList.contains('darkTheme')) {
     document.getElementById('themeBody').classList.replace('darkTheme', 'lightTheme');
-    document.getElementById("shoppingIcon").src = "img/icon/shoppingIconLT.svg";
+    document.getElementById("shoppingIcon").src = "src/assets/img/icon/shoppingIconLT.svg";
     if (document.getElementById("githubIcon")) {
-      document.getElementById("githubIcon").src = "img/icon/githubIconLT.svg";
+      document.getElementById("githubIcon").src = "src/assets/img/icon/githubIconLT.svg";
       // linkedinIcon1 == linkedinIcon2
-      document.getElementById("linkedinIcon1").src = "img/icon/linkedinIconLT.svg";
-      document.getElementById("linkedinIcon2").src = "img/icon/linkedinIconLT.svg";
+      document.getElementById("linkedinIcon1").src = "src/assets/img/icon/linkedinIconLT.svg";
+      document.getElementById("linkedinIcon2").src = "src/assets/img/icon/linkedinIconLT.svg";
     }
     if (document.getElementById("searchIcon")) {
-      document.getElementById("searchIcon").src = "img/icon/searchIconLT.svg";
-      document.getElementById("filterIcon").src = "img/icon/filterIconLT.svg";
+      document.getElementById("searchIcon").src = "src/assets/img/icon/searchIconLT.svg";
+      document.getElementById("filterIcon").src = "src/assets/img/icon/filterIconLT.svg";
     }
     if (document.getElementById("userIcon")) {
-      document.getElementById("userIcon").src = "img/icon/userIconLT.svg";
-      document.getElementById("shoppingIcon1").src = "img/icon/shoppingIconLT.svg"; 
+      document.getElementById("userIcon").src = "src/assets/img/icon/userIconLT.svg";
+      document.getElementById("shoppingIcon1").src = "src/assets/img/icon/shoppingIconLT.svg"; 
     }
     if (document.getElementById("redactIcon")) {
-      document.getElementById("redactIcon").src = "img/icon/pencilIconLT.svg";
+      document.getElementById("redactIcon").src = "src/assets/img/icon/pencilIconLT.svg";
     }
     if (document.getElementById("dateInput")) {
       document.getElementById('dateInput').classList.replace('dateInputDT', 'dateInputLT');
     }
   } else {
     document.getElementById('themeBody').classList.replace('lightTheme', 'darkTheme');
-    document.getElementById("shoppingIcon").src = "img/icon/shoppingIconDT.svg";
+    document.getElementById("shoppingIcon").src = "src/assets/img/icon/shoppingIconDT.svg";
     if (document.getElementById("githubIcon")) {
-      document.getElementById("githubIcon").src = "img/icon/githubIconDT.svg";
+      document.getElementById("githubIcon").src = "src/assets/img/icon/githubIconDT.svg";
       // linkedinIcon1 == linkedinIcon2
-      document.getElementById("linkedinIcon1").src = "img/icon/linkedinIconDT.svg";
-      document.getElementById("linkedinIcon2").src = "img/icon/linkedinIconDT.svg";
+      document.getElementById("linkedinIcon1").src = "src/assets/img/icon/linkedinIconDT.svg";
+      document.getElementById("linkedinIcon2").src = "src/assets/img/icon/linkedinIconDT.svg";
     }
     if (document.getElementById("searchIcon")) {
-      document.getElementById("searchIcon").src = "img/icon/searchIconDT.svg";
-      document.getElementById("filterIcon").src = "img/icon/filterIconDT.svg";
+      document.getElementById("searchIcon").src = "src/assets/img/icon/searchIconDT.svg";
+      document.getElementById("filterIcon").src = "src/assets/img/icon/filterIconDT.svg";
     }
     if (document.getElementById("userIcon")) {
-      document.getElementById("userIcon").src = "img/icon/userIconDT.svg";
-      document.getElementById("shoppingIcon1").src = "img/icon/shoppingIconDT.svg";
+      document.getElementById("userIcon").src = "src/assets/img/icon/userIconDT.svg";
+      document.getElementById("shoppingIcon1").src = "src/assets/img/icon/shoppingIconDT.svg";
     }
     if (document.getElementById("redactIcon")) {
-      document.getElementById("redactIcon").src = "img/icon/pencilIconDT.svg";
+      document.getElementById("redactIcon").src = "src/assets/img/icon/pencilIconDT.svg";
     }
     if (document.getElementById("dateInput")) {
       document.getElementById('dateInput').classList.replace('dateInputLT', 'dateInputDT');
@@ -81,9 +81,9 @@ function redactShow() {
 
     document.getElementById("redactSave").style.display = "block";
     if (document.getElementById('themeBody').classList.contains('darkTheme')) {
-      document.getElementById("redactIcon").src = "img/icon/crossIconDT.svg";
+      document.getElementById("redactIcon").src = "src/assets/img/icon/crossIconDT.svg";
     } else {
-      document.getElementById("redactIcon").src = "img/icon/crossIconLT.svg";
+      document.getElementById("redactIcon").src = "src/assets/img/icon/crossIconLT.svg";
     }
   } else {
     if(isDisplayBlock=="block"){
@@ -104,9 +104,9 @@ function redactShow() {
 
       document.getElementById("redactSave").style.display = "block";
       if (document.getElementById('themeBody').classList.contains('darkTheme')) {
-        document.getElementById("redactIcon").src = "img/icon/crossIconDT.svg";
+        document.getElementById("redactIcon").src = "src/assets/img/icon/crossIconDT.svg";
       } else {
-        document.getElementById("redactIcon").src = "img/icon/crossIconLT.svg";
+        document.getElementById("redactIcon").src = "src/assets/img/icon/crossIconLT.svg";
       }
     } else {
       document.getElementById("staticLogin").style.display = "block";
@@ -126,9 +126,9 @@ function redactShow() {
 
       document.getElementById("redactSave").style.display = "none";
       if (document.getElementById('themeBody').classList.contains('darkTheme')) {
-        document.getElementById("redactIcon").src = "img/icon/pencilIconDT.svg";
+        document.getElementById("redactIcon").src = "src/assets/img/icon/pencilIconDT.svg";
       } else {
-        document.getElementById("redactIcon").src = "img/icon/pencilIconLT.svg";
+        document.getElementById("redactIcon").src = "src/assets/img/icon/pencilIconLT.svg";
       }
     }
   }
