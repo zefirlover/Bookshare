@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    --background-color: #121212;
+    --dark-background-color: #0e0d0d;
+    --background: url(client/img/gradient-image-DT.png);
+    --background-small: url(client/img/gradient-image-smol-DT.png);
+    --header-shadow: 0px 12px 16px -16px rgba(237, 245, 251, 0.6);
+    --footer-shadow: 0px -12px 16px -16px rgba(237, 245, 251, 0.6);
+    --shadow: 0px 0px 10px 0px rgba(237, 245, 251, 0.6);
+    --text-color: #fefbf2;
+    --background-image: url(client/img/icon/sunIcon.svg);
+
+    --shopping-image: url(client/img/icon/shoppingIconDT.svg);
+}
+
+body.lightTheme
+{
+    --background-color: #fefbf2;
+    --dark-background-color: rgba(255,243,218,1);
+    --background: url(client/img/gradient-image-LT.png);
+    --background-small: url(client/img/gradient-image-smol-LT.png);
+    --header-shadow: 0px 2px 16px -5px rgba(34, 60, 80, 0.6);
+    --footer-shadow: 0px -2px 16px -5px rgba(34, 60, 80, 0.6);
+    --shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.6);
+    --text-color: #131313;
+    --background-image: url(client/img/icon/moonIcon.svg);
+    
+    --shopping-image: url(client/img/icon/shoppingIconLT.svg);
+}
+
+
+html, body { min-height: 100%; }
+body {
+    background-color: var(--dark-background-color);
+    background: var(--background);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500; /*medium*/
+    color: var(--text-color);
+
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    body {
+        background-color: var(--dark-background-color);
+        background: var(--background-small);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+app-header {
+    min-height: 100px;
+    background-color: var(--background-color);
+
+    -webkit-box-shadow: var(--header-shadow);
+    -moz-box-shadow: var(--header-shadow);
+    box-shadow: var(--header-shadow);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15vw;
+}
+
+.header__logo {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.roundle {
+    height: 34px;
+    width: 34px;
+    border: 2px solid var(--text-color);
+    border-radius: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.roundle:hover {
+    opacity: 80%;
+}
+.roundle:active{
+    opacity: 20%;
+}
+.roundle__logo {
+    width: 30px;
+    height: 30px;
+    background-image: var(--shopping-image);
+}
+
+.reference{
+    color: var(--text-color);
+    text-decoration: none;
+}
+.reference:hover{
+    opacity: 80%;
+}
+.reference:active{
+    opacity: 20%;
+}
+
+@media (max-width: 380px) {
+    app-header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .roundle {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: center;
+    }
+    .switch {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: center;
+    }
+    .logo {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1;
+        justify-self: center;
+    }
+}

@@ -10,7 +10,7 @@
           "strict": true
         }
       },
-      "root": "src/client",
+      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -18,17 +18,19 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/hello-world",
-            "index": "src/client/index.html",
+            "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/client/img"
+              "src/assets",
+              "src/client/img",
+              "src/client/img/icon"
             ],
             "styles": [
-              "src/client/css/normalize.css",
-              "src/client/css/style.css"
+              "src/custom-theme.scss",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -92,11 +94,12 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/client/img"
+              "src/assets",
+              "src/client/img",
+              "src/client/img/icon"
             ],
             "styles": [
-              "src/client/css/normalize.css",
-              "src/client/css/style.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
