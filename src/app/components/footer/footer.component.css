@@ -1,0 +1,10 @@
+footer {
+    min-height: 100px;
+    background-color: var(--background-color);
+
+    -webkit-box-shadow: var(--footer-shadow);
+    -moz-box-shadow: var(--footer-shadow);
+    box-shadow: var(--footer-shadow);
+
+    padding: 50px 15vw;
+}
