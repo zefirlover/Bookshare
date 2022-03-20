@@ -149,7 +149,7 @@ app-header {
 
 main {
     padding: 30px 15vw;
-    min-height: 100%;
+    min-height: 40vh;
 }
 
 .searchBlock {
@@ -209,6 +209,7 @@ main {
 }
 @media (max-width: 768px){
     .inlineList { flex-direction: column; }
+    .inlineList li { width: fit-content; }
 }
 @media (max-width: 425px) {
     .inlineList { width: 100%; }
@@ -219,6 +220,94 @@ main {
     align-items: center;
 }
 
+.button {
+    height: 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 10px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    opacity: 80%;
+}
+.button:active {
+    opacity: 20%;
+}
+
+/*checkbox "remember me"*/
+.checkbox__container {
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox__input + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.checkbox__input + label::before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: var(--background-color);
+    border: 2px solid var(--text-color);
+    border-radius: 35%;
+}
+.checkbox__input:hover + label::before {
+    opacity: 80%;
+}
+.checkbox__input:focus + label::before {
+    opacity: 80%;
+}
+.checkbox__input:checked + label::before {
+    background: var(--text-color);
+}
+.checkbox__input:disabled + label {
+    opacity: 50%;
+    cursor: auto;
+}
+.checkbox__input:disabled + label::before {
+    box-shadow: none;
+    opacity: 50%;
+}
+.checkbox__input:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 11px;
+    background: var(--background-color);
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 var(--background-color),
+      4px 0 0 var(--background-color),
+      4px -2px 0 var(--background-color),
+      4px -4px 0 var(--background-color),
+      4px -6px 0 var(--background-color),
+      4px -8px 0 var(--background-color);
+    transform: rotate(45deg);
+}
+@media (max-width: 280px) {
+    .checkbox__input:checked + label::after { top: 17px; }
+}
+
+/*footer elements*/
 .githubIcon {
     width: 64px;
     height: 64px;
@@ -233,6 +322,14 @@ main {
     background-image: var(--linkedin-image);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (max-width: 768px) {
+    .githubIcon, .linkedinIcon {
+        width: 32px;
+        height: 32px;
+        background-size: cover;
+    }
 }
 
 .footer__logo {
