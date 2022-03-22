@@ -1,0 +1,25 @@
+<form class="loginBlock" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <h2>Вхід</h2>
+    <input class="loginBlock__input" 
+        type="email" 
+        placeholder="email_example@example.com" 
+        name="email"
+        id="email"
+        [(ngModel)]="email"
+        required>
+    <input class="loginBlock__input" 
+        type="password" 
+        placeholder="Пароль" 
+        name="password"
+        id="inputPassword"
+        [(ngModel)]="password"
+        required>
+    <!--
+    <section class="checkbox__container">
+          <input type="checkbox" class="checkbox__input" id="checkbox__input">
+          <label for="checkbox__input">Запам'ятайте мене</label>
+    </section>
+    -->
+    <button class="loginBlock__button" type="submit" [disabled]="busy">Увійти</button>
+    <p *ngIf="loginError">логін помилка</p>
+</form>
