@@ -45,13 +45,13 @@ export class LoginComponent implements OnInit, OnDestroy {
     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '';
     this.authService
       .login(this.email, this.password)
-      .pipe(finalize(() => (this.busy = false)))
       .subscribe(
         () => {
           this.router.navigate([returnUrl]);
         },
         () => {
           this.loginError = true;
+          this.busy = false;
         }
       );
   }
