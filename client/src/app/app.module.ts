@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { CoreModule } from './core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './components/error/error.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     SearchBarComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ErrorComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,17 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+/*
+    JwtModule.forRoot({
+      config:{
+        tokenGetter:() => {
+          return localStorage.getItem('access_token');
+        },
+        allowedDomains: ['localhost:5000'],
+        disallowedRoutes:[]
+      }
+    })*/
   ],
   providers: [],
   bootstrap: [AppComponent]

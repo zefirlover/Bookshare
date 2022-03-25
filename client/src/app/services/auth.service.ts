@@ -1,16 +1,16 @@
-import { Injectable, OnDestroy } from '@angular/core';
+import { EventEmitter, Injectable, OnDestroy, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of, Subscription } from 'rxjs';
-import { map, tap, delay, finalize } from 'rxjs/operators';
+import { tap, delay, finalize } from 'rxjs/operators';
 import { ApplicationUser } from '../models/application-user';
 import { environment } from 'src/environments/environment';
 
 interface LoginResult {
-  email: string;
-  role: string;
-  accessToken: string;
-  refreshToken: string;
+  isSucceeded: boolean;
+  // todo change any
+  result: any;
+  errors: Array<string>;
 }
 
 @Injectable({
@@ -32,8 +32,8 @@ export class AuthService implements OnDestroy {
         this.stopTokenTimer();
         this.http.get<LoginResult>(`${this.apiUrl}/user`).subscribe((x) => {
           this._user.next({
-            email: x.email,
-            role: x.role,
+            email: x.result.userName,
+            role: x.result.role,
           });
         });
       }
@@ -48,20 +48,18 @@ export class AuthService implements OnDestroy {
     window.removeEventListener('storage', this.storageEventListener.bind(this));
   }
 
-  login(email: string, password: string) {
-    return this.http
-      .post<LoginResult>(`${this.apiUrl}/login`, { email, password })
+  login(email: string, password: string): Observable<LoginResult> {
+    let post = this.http.post<LoginResult>(`${this.apiUrl}/login`, { email, password })
       .pipe(
-        map((x) => {
-          this._user.next({
-            email: x.email,
-            role: x.role,
-          });
+        tap((x) => {
+          this._user.next({ email: x.result.userName, role: x.result.role });
           this.setLocalStorage(x);
+          localStorage.setItem('login-event', 'login' + Math.random());
           this.startTokenTimer();
           return x;
-        })
-      );
+      })
+    );
+    return post;
   }
 
   logout() {
@@ -88,10 +86,10 @@ export class AuthService implements OnDestroy {
     return this.http
       .post<LoginResult>(`${this.apiUrl}/refresh-token`, { refreshToken })
       .pipe(
-        map((x) => {
+        tap((x) => {
           this._user.next({
-            email: x.email,
-            role: x.role,
+            email: x.result.userName,
+            role: x.result.role,
           });
           this.setLocalStorage(x);
           this.startTokenTimer();
@@ -101,8 +99,8 @@ export class AuthService implements OnDestroy {
   }
 
   setLocalStorage(x: LoginResult) {
-    localStorage.setItem('access_token', x.accessToken);
-    localStorage.setItem('refresh_token', x.refreshToken);
+    localStorage.setItem('access_token', x.result.accessToken);
+    localStorage.setItem('refresh_token', x.result.refreshToken);
     localStorage.setItem('login-event', 'login' + Math.random());
   }
 

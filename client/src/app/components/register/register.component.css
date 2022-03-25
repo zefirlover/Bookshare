@@ -1,0 +1,47 @@
+.loginBlock {
+    margin: 0 20vw;
+}
+@media (max-width: 768px){
+    .loginBlock { margin: 0; }
+}
+
+.loginBlock__input {
+    width: calc(100% - 30px);
+    height: 35px;
+
+    margin: 10px 0;
+    padding: 0 15px;
+
+    border-radius: 45px;
+    border: transparent;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+.loginBlock__button {
+    width: 100%;
+    height: 35px;
+
+    margin: 10px 0;
+
+    border-radius: 45px;
+    border: transparent;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
+}
+.loginBlock__button:hover {
+    opacity: 80%;
+}
+.loginBlock__button:active {
+    opacity: 20%;
+}

@@ -1,0 +1,28 @@
+<form class="loginBlock" (ngSubmit)="register()">
+    <h2>Вхід</h2>
+    <input class="loginBlock__input" 
+        type="email" 
+        placeholder="email@example.com" 
+        name="email"
+        [(ngModel)]="email"
+        required
+    >
+    <input class="loginBlock__input" 
+        type="text" 
+        placeholder="Пароль" 
+        name="password"
+        id="inputPassword"
+        [(ngModel)]="password"
+        required
+    >
+    <input class="loginBlock__input" 
+        type="text" 
+        placeholder="Підтвердіть пароль" 
+        name="confirmPassword"
+        [(ngModel)]="confirmPassword"
+        required
+    >
+    <button class="loginBlock__button" type="submit" [disabled]="busy">Зареєструватися</button>
+    <p *ngIf="registerError">пароль гавно</p>
+    <a routerLink='/login'>Назад</a>
+</form>

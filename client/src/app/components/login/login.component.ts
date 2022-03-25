@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  login(form: NgForm) {
+  login() {
     if (!this.email || !this.password) {
       return;
     }
@@ -46,10 +46,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.authService
       .login(this.email, this.password)
       .subscribe(
-        () => {
+        (navigate) => {
           this.router.navigate([returnUrl]);
         },
-        () => {
+        (error) => {
           this.loginError = true;
           this.busy = false;
         }
