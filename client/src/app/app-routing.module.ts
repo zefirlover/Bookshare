@@ -3,7 +3,6 @@ import { ErrorComponent } from './components/error/error.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -16,8 +15,15 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'error', component: ErrorComponent },
-  { path: 'register', component: RegisterComponent},
-
+  { path: 'register', component: RegisterComponent },
+  {
+    path: 'authors',
+    loadChildren: () =>
+      import('./authors/authors.module').then(
+        (m) => m.AuthorsModule
+      ),
+    canActivate: [AuthGuard],
+  },
   { path: '**', redirectTo: 'error' },
 ];
 

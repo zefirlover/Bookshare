@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './components/error/error.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthorsModule } from './authors/authors.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RegisterComponent } from './components/register/register.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    AuthorsModule,
 /*
     JwtModule.forRoot({
       config:{
