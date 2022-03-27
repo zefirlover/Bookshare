@@ -24,6 +24,14 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'libraries',
+    loadChildren: () =>
+      import('./libraries/libraries.module').then(
+        (m) => m.LibrariesModule
+      ),
+    canActivate: [AuthGuard],
+  },
   { path: '**', redirectTo: 'error' },
 ];
 

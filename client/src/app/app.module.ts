@@ -14,9 +14,9 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './components/error/error.component';
-import { JwtModule } from '@auth0/angular-jwt';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthorsModule } from './authors/authors.module';
+import { LibrariesModule } from './libraries/libraries.module';
 
 @NgModule({
   declarations: [
@@ -37,16 +37,17 @@ import { AuthorsModule } from './authors/authors.module';
     BrowserAnimationsModule,
     FormsModule,
     AuthorsModule,
-/*
-    JwtModule.forRoot({
-      config:{
-        tokenGetter:() => {
-          return localStorage.getItem('access_token');
-        },
-        allowedDomains: ['localhost:5000'],
-        disallowedRoutes:[]
-      }
-    })*/
+    LibrariesModule,
+    /*
+        JwtModule.forRoot({
+          config:{
+            tokenGetter:() => {
+              return localStorage.getItem('access_token');
+            },
+            allowedDomains: ['localhost:5000'],
+            disallowedRoutes:[]
+          }
+        })*/
   ],
   providers: [],
   bootstrap: [AppComponent]
