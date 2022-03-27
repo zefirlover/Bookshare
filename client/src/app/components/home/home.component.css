@@ -70,3 +70,6 @@
 .product__author{
     font-size: 13px;
 }
+.product__author p {
+    margin: 0;
+}

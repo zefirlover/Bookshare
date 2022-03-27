@@ -8,8 +8,12 @@ import { environment } from 'src/environments/environment';
 
 interface LoginResult {
   isSucceeded: boolean;
-  // todo change any
-  result: any;
+  result: ApplicationUser;
+  errors: Array<string>;
+}
+
+interface RegisterResult {
+  isSucceeded: boolean;
   errors: Array<string>;
 }
 
@@ -32,8 +36,10 @@ export class AuthService implements OnDestroy {
         this.stopTokenTimer();
         this.http.get<LoginResult>(`${this.apiUrl}/user`).subscribe((x) => {
           this._user.next({
-            email: x.result.userName,
+            email: x.result.email,
             role: x.result.role,
+            accessToken: x.result.accessToken,
+            refreshToken: x.result.refreshToken
           });
         });
       }
@@ -52,10 +58,16 @@ export class AuthService implements OnDestroy {
     let post = this.http.post<LoginResult>(`${this.apiUrl}/login`, { email, password })
       .pipe(
         tap((x) => {
-          this._user.next({ email: x.result.userName, role: x.result.role });
+          this._user.next({ 
+            email: x.result.email,
+            role: x.result.role,
+            accessToken: x.result.accessToken,
+            refreshToken: x.result.refreshToken
+          });
           this.setLocalStorage(x);
           localStorage.setItem('login-event', 'login' + Math.random());
           this.startTokenTimer();
+          console.log(typeof x.result)
           return x;
       })
     );
@@ -76,6 +88,12 @@ export class AuthService implements OnDestroy {
       .subscribe();
   }
 
+  register(email: string, password: string, confirmPassword: string): Observable<RegisterResult> {
+    let returnResult = this.http.post<RegisterResult>(`${this.apiUrl}/register`, { email, password, confirmPassword });
+    console.log(returnResult)
+    return returnResult;
+  }
+
   refreshToken(): Observable<LoginResult | null> {
     const refreshToken = localStorage.getItem('refresh_token');
     if (!refreshToken) {
@@ -88,8 +106,10 @@ export class AuthService implements OnDestroy {
       .pipe(
         tap((x) => {
           this._user.next({
-            email: x.result.userName,
+            email: x.result.email,
             role: x.result.role,
+            accessToken: x.result.accessToken,
+            refreshToken: x.result.refreshToken
           });
           this.setLocalStorage(x);
           this.startTokenTimer();
