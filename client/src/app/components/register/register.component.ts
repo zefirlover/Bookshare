@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { RegisterService } from 'src/app/services/register.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   registerError = false;
   private subscription: Subscription | null = null;
   
-  constructor(private registerService: RegisterService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
     this.busy = true;
-    this.registerService
+    this.authService
       .register(this.email, this.password, this.confirmPassword)
       .subscribe(
         () => {
