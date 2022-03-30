@@ -1,0 +1,4 @@
+.clear {
+    background-image: var(--cross-image);
+    background-size: 25px 25px;
+}

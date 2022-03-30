@@ -13,13 +13,7 @@
         id="inputPassword"
         [(ngModel)]="password"
         required>
-    <!--
-    <section class="checkbox__container">
-          <input type="checkbox" class="checkbox__input" id="checkbox__input">
-          <label for="checkbox__input">Запам'ятайте мене</label>
-    </section>
--->
-    <a routerLink='/register'>Зареєструватися</a>
-    <button class="loginBlock__button" type="submit" [disabled]="busy">Увійти</button><!--
-    <p *ngIf="loginError">логін помилка</p>-->
+    <a routerLink='/register' class="loginBlock__register">Зареєструватися</a>
+    <button class="loginBlock__button" type="submit" [disabled]="busy">Увійти</button>
+    <div *ngIf="isLoginError" class="loginBlock_errorText">Невірний логін або пароль</div>
 </form>

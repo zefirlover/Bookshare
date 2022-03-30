@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   email = '';
   password = '';
   confirmPassword = '';
-  registerError = false;
+  isRegisterError = false;
   private subscription: Subscription | null = null;
   
   constructor(private authService: AuthService) { }
@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
           this.busy = false;
         },
         (error) => {
-          this.registerError = true;
+          this.isRegisterError = true;
           this.busy = false;
         }
       );

@@ -1,5 +1,5 @@
 <form class="loginBlock" (ngSubmit)="register()">
-    <h2>Вхід</h2>
+    <h2>Реєстрація</h2>
     <input class="loginBlock__input" 
         type="email" 
         placeholder="email@example.com" 
@@ -23,6 +23,6 @@
         required
     >
     <button class="loginBlock__button" type="submit" [disabled]="busy">Зареєструватися</button>
-    <p *ngIf="registerError">пароль гавно</p>
-    <a routerLink='/login'>Назад</a>
+    <a routerLink='/login' class="loginBlock__register">Назад</a>
+    <p *ngIf="isRegisterError" class="loginBlock_errorText">Пароль має мати мінімум 1 букву, 1 цифру та 1 символ</p>
 </form>

@@ -38,8 +38,6 @@ export class GetBooksService {
         })
       })
     );
-    console.log('get: ', a);
-    console.log('_book: ', this._book);
     return a;
   }
 }

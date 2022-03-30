@@ -1,7 +1,5 @@
-import { NgForm } from '@angular/forms';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { finalize } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -15,7 +13,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   busy = false;
   email = '';
   password = '';
-  loginError = false;
+  isLoginError = false;
   private subscription: Subscription | null = null;
 
   constructor(
@@ -50,7 +48,7 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.router.navigate([returnUrl]);
         },
         (error) => {
-          this.loginError = true;
+          this.isLoginError = true;
           this.busy = false;
         }
       );

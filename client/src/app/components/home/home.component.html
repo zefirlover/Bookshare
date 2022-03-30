@@ -1,7 +1,9 @@
-<app-search-bar></app-search-bar>
+<app-search-bar (buttonClicked)='writeSearchVar($event)'></app-search-bar>
 <section class="productContainer">
     <section class="productContainer_row">
-        <div class="product" *ngFor="let book of books">
+        <div class="product" 
+            *ngFor="let book of books | searchFilter: searchText"
+        >
             <img class="product__image"
                 src="{{book.photoPath}}"
                 alt="Product image">

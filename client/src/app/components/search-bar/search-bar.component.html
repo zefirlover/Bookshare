@@ -1,4 +1,5 @@
-<form class="searchBlock" #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <input class="searchBlock__input" type="text" placeholder="Пошук" name="search" ngModel>
-    <button class="searchBlock__button"></button>
+<form class="searchBlock" #form="ngForm">
+    <input class="searchBlock__input" type="text" placeholder="Пошук" name="search" [(ngModel)]="searchText">
+    <button class="searchBlock__button clear" *ngIf="isButtonVisible" (click)="onClear()"></button>
+    <button class="searchBlock__button" (click)="onSubmit()"></button>
 </form>

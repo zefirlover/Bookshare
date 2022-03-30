@@ -1,4 +1,3 @@
-import { environment } from './../environments/environment';
 import { CoreModule } from './core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +16,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthorsModule } from './authors/authors.module';
 import { LibrariesModule } from './libraries/libraries.module';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { LibrariesModule } from './libraries/libraries.module';
     HomeComponent,
     LoginComponent,
     ErrorComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,7 @@ import { LibrariesModule } from './libraries/libraries.module';
     BrowserAnimationsModule,
     FormsModule,
     AuthorsModule,
-    LibrariesModule,
+    LibrariesModule
     /*
         JwtModule.forRoot({
           config:{

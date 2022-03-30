@@ -14,6 +14,7 @@ body {
     --search-image: url(client/img/icon/searchIconDT.svg);
     --github-image: url(client/img/icon/githubIconDT.svg);
     --linkedin-image: url(client/img/icon/linkedinIconDT.svg);
+    --cross-image: url(client/img/icon/crossIconDT.svg);
 }
 
 body.lightTheme {
@@ -31,6 +32,7 @@ body.lightTheme {
     --search-image: url(client/img/icon/searchIconLT.svg);
     --github-image: url(client/img/icon/githubIconLT.svg);
     --linkedin-image: url(client/img/icon/linkedinIconLT.svg);
+    --cross-image: url(client/img/icon/crossIconLT.svg)
 }
 
 
@@ -305,6 +307,26 @@ main {
 }
 @media (max-width: 280px) {
     .checkbox__input:checked + label::after { top: 17px; }
+}
+
+.loginBlock_errorText {
+    color: #ba0909;
+    text-align: center;
+}
+
+.loginBlock__register {
+    padding-left: 15px;
+    color: var(--text-color);
+}
+.loginBlock__register:hover {
+    opacity: 80%;
+}
+.loginBlock__register:active {
+    opacity: 20%;
+}
+
+.loginBlock h2 {
+    padding-left: 15px;
 }
 
 /*footer elements*/
