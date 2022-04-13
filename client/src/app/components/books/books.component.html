@@ -1,0 +1,20 @@
+<app-search-bar (buttonClicked)='writeSearchVar($event)'></app-search-bar>
+<section class="productContainer">
+    <a routerLink="/addBook" class="button">додати книжку</a>
+    <section class="productContainer_row">
+        <div class="product" 
+            *ngFor="let book of books | searchFilter: searchText"
+        >
+            <img class="product__image"
+                src="{{book.photoPath}}"
+                alt="Product image">
+            <p class="product__library">{{book.id}}</p>
+            <h2 class="product__header">{{book.name}}</h2>
+            <div class="product__author" *ngFor="let author of book.authors">
+                <p>{{author.name}}</p>
+            </div>
+            <p class="product__library">{{book.library.name}}</p>
+            <a routerLink="{{book.id}}" class="button">редагувати</a>
+        </div>
+    </section>
+</section>

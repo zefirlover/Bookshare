@@ -1,0 +1,23 @@
+<section class="userInfo" *ngIf="currentBook">
+    <section class="userInfo__header">
+        <h2>Редагування книги</h2>
+        <button (click)="deleteBook(currentBook.id)">знести к єбені матері</button>
+    </section>
+    <h3 class="userInfo__text">Назва книги</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" placeholder="{{currentBook.name}}" [(ngModel)]="currentBook.name">
+    </div>
+    <h3 class="userInfo__text">Посилання на зображення</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" placeholder="{{currentBook.photoPath}}" [(ngModel)]="currentBook.photoPath">
+    </div>
+    <h3 class="userInfo__text">Айді бібліотеки</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" placeholder="{{currentBook.library.id}}" [(ngModel)]="currentBook.library.id">
+    </div>
+    <h3 class="userInfo__text">Айді авторів</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" placeholder="{{authorIdRaw}}" [(ngModel)]="authorIdRaw">
+    </div>
+    <button (click)="updateBook(currentBook.id, currentBook.name, currentBook.photoPath!, currentBook.library.id, authorIdRaw)">Зберегти</button>
+</section>

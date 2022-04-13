@@ -10,6 +10,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
+  // todo change any
+  errors: any;
   busy = false;
   email = '';
   password = '';
@@ -44,10 +46,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.authService
       .login(this.email, this.password)
       .subscribe(
-        (navigate) => {
+        navigate => {
           this.router.navigate([returnUrl]);
         },
-        (error) => {
+        error => {
           this.isLoginError = true;
           this.busy = false;
         }

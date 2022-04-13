@@ -1,0 +1,22 @@
+<section class="userInfo">
+    <section class="userInfo__header">
+        <h2>Редагування книги</h2>
+    </section>
+    <h3 class="userInfo__text">Назва книги</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" [(ngModel)]="name">
+    </div>
+    <h3 class="userInfo__text">Посилання на зображення</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" [(ngModel)]="photoPath">
+    </div>
+    <h3 class="userInfo__text">Айді бібліотеки</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" [(ngModel)]="libraryId">
+    </div>
+    <h3 class="userInfo__text">Айді авторів</h3>
+    <div class="userInfo__block">
+        <input class="redactInput" type="text" [(ngModel)]="authorIdRaw">
+    </div>
+    <button (click)="addBook(name, photoPath, libraryId, authorIdRaw)">Додати</button>
+</section>

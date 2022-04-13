@@ -17,6 +17,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { AuthorsModule } from './authors/authors.module';
 import { LibrariesModule } from './libraries/libraries.module';
 import { SearchPipe } from './search.pipe';
+import { BooksEditComponent } from './components/books-edit/books-edit.component';
+import { BooksComponent } from './components/books/books.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { SearchPipe } from './search.pipe';
     ErrorComponent,
     RegisterComponent,
     SearchPipe,
+    BooksEditComponent,
+    BooksComponent,
+    AddBookComponent,
   ],
   imports: [
     BrowserModule,

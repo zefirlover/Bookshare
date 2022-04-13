@@ -9,12 +9,12 @@ import { environment } from 'src/environments/environment';
 interface LoginResult {
   isSucceeded: boolean;
   result: ApplicationUser;
-  errors: Array<string>;
+  errors: string[];
 }
 
 interface RegisterResult {
   isSucceeded: boolean;
-  errors: Array<string>;
+  errors: string[];
 }
 
 @Injectable({
@@ -67,8 +67,6 @@ export class AuthService implements OnDestroy {
           this.setLocalStorage(x);
           localStorage.setItem('login-event', 'login' + Math.random());
           this.startTokenTimer();
-          console.log(typeof x.result)
-          return x;
       })
     );
     return post;
